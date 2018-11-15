@@ -1,6 +1,6 @@
-# j4j Development concepts
+# Application Development concepts
 
-The technologies, patterns, information flow and data management principles at J4J
+Technologies, patterns, information flow and data management principles for modern web application development.
 
 ## Technologies
 - React

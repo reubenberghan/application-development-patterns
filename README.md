@@ -1,4 +1,4 @@
-# Application Development concepts
+# Application Development Concepts
 
 Technologies, patterns, information flow and data management principles for building modern web application development.
 

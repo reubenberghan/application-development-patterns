@@ -1,6 +1,6 @@
 # Application Development concepts
 
-Technologies, patterns, information flow and data management principles for modern web application development.
+Technologies, patterns, information flow and data management principles for building modern web application development.
 
 ## Technologies
 - React

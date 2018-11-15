@@ -1,4 +1,5 @@
-# j4j-application-patterns
+# j4j Development concepts
+
 The technologies, patterns, information flow and data management principles at J4J
 
 ## Technologies
@@ -10,9 +11,13 @@ The technologies, patterns, information flow and data management principles at J
 - Ramda
 - Ramda Adjunct
 
+## Concepts
+
+- Ramda's `map`
+
 ## Application Structure
+```
 |- components
-|- containers
 |- pages
 |- state
 |   |- actions
@@ -22,3 +27,4 @@ The technologies, patterns, information flow and data management principles at J
 |   |- selectors
 |- utilities
 |- wrappers
+```

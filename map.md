@@ -7,26 +7,27 @@ The `map` function allows you to achieve this by taking a function (used to chan
 ```
 import { map } from 'ramda'
 
+// function used to "map" each item from the orginal list to the new one
 const addOne = num => num + 1
 
+// our list we want to "map" through
 const list = [1, 2, 3]
 
+// "map" the addOne function against each item in list
 const result = map(addOne, list)
 
 result // [2, 3, 4]
 ```
 
-Using Ramda's `map` over JavaScript's built in implementation gives us access to the functional power of Ramda which include concepts like currying and composibility.
+Using Ramda's `map` over JavaScript's built in implementation gives us access to the functional power of Ramda which include concepts like currying and composibility. Having access to these functional concepts becomes hugely beneficial as the nature and complexity of the data and problems we need to work with grows.
 
 ## Map in React
 
-UI development is no different we will often have a list of things we want to display on a page somewhere.
+UI development is no different we often encounter lists of data we want to manipulate and / or display on a page somewhere.
 
-We could get a list of items from many sources such as a third party API or our database (probably via our own API) but in any case these are likely to be given to us in a list form (in JavaScript this will generally be an `array`).
+In front end applications these lists often come via API calls or our client state and at some point we need to take these lists of data and turn them into consumable components our application knows how to handle.
 
-The thing though is that this list will probably be sent as data in a JSON, XML, or other data transfer format. Not really in a form that we can readily render out onto the screen.
-
-This is where `map` comes in, we want to take our list of data map and over each item generally returning a list of React components turning the data into a more consumable format for our app.
+This is where `map` comes in and we take our data then map over it returning a list of React components we can render out.
 
 So given a list of data:
 
@@ -50,7 +51,7 @@ const data = [
 ]
 ```
 
-And an `Organization` component which takes `title` and `image` as `props`:
+And a component, for example `Organization` which takes `title` and `image` as `props`:
 
 ```
 <Organization title={...} image={...} />
@@ -65,4 +66,6 @@ map(
 )
 ```
 
+Also note the additional `key` prop we give to the component returned by the function used in `map`. This is an important performance consideration for React. The `key` is used by React to ensure only the components that need to change are when it updates the DOM.
 
+Using a unique `key` value for each component ensures this so avoiding the use of the `index` of that item in the list would be the preferred approach.

@@ -13,7 +13,7 @@ Technologies, patterns, information flow and data management principles for buil
 
 ## Concepts
 
-- Ramda's `map`
+- [Ramda's `map`](map.md)
 
 ## Application Structure
 ```

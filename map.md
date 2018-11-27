@@ -40,12 +40,12 @@ So given a list of data, for example `organizations` (this is a pretty standard 
 const organizations = [
   {
     id: '123abc',
-    title: 'Jimmy's Chocolate Factory',
+    title: `Jimmy's Chocolate Factory`,
     image: 'https://place-hold.it/200'
   },
     {
     id: '123abd',
-    title: 'Anna's Computer Emporium',
+    title: `Anna's Computer Emporium`,
     image: 'https://place-hold.it/200'
   },
     {

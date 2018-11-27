@@ -2,6 +2,23 @@
 
 Styled components allow us to encapsulate CSS into their own components. They provide all of the power of CSS combined with the ability to add logic to styles through props passed to the component as we might with a regular React component.
 
+```javascript
+// src/components/Button
+import styled from 'styled-components'
+
+const Button = styled.button`
+  background-color: darkgray;
+  
+  &:hover {
+    background-color: gray;
+  }
+`
+
+Button.displayName = 'Button'
+
+export default Button
+```
+
 ## How we will use them
 
 In order to keep our files clean we can separate the styled components into their own directories at the highest possible level that they are required. This simply means that if a styled component is only required by one component then it can sit underneath that components directory in the file structure or if it is required across the app then it can sit at the top level.

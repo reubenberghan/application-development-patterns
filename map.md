@@ -6,7 +6,7 @@ The `map` function allows you to achieve this by taking a function (used to chan
 
 A simple example would look like the below:
 
-```
+```javascript
 import { map } from 'ramda'
 
 // function used to "map" each item from the orginal list to the new one
@@ -36,7 +36,7 @@ In React we are more often than not wanting to turn (or "map") the list of data 
 
 So given a list of data, for example `organizations` (this is a pretty standard structure we will work with, an array of objects):
 
-```
+```javascript
 const organizations = [
   {
     id: '123abc',
@@ -58,13 +58,13 @@ const organizations = [
 
 And a component, for example `Organization` which takes `title` and `image` as `props`:
 
-```
+```javascript
 <Organization title={...} image={...} />
 ```
 
 We want to "map" each object in the `data` list to our `Organization` component:
 
-```
+```javascript
 map(
   ({ id, image, title }) => <Organization key={id} title={title} image={image} />,
   organizations
@@ -81,7 +81,7 @@ Using a unique `key` value for each component ensures this so avoiding the use o
 
 The full React component might look like:
 
-```
+```javascript
 // src/components/OrganizationList/index.js
 import * as React from 'react'
 import { map } from 'ramda'
@@ -104,7 +104,7 @@ A note on the example above and the function we give to `map` to apply to each l
 
 For example we could pull the function out on its own as `mapOrganization`:
 
-```
+```javascript
 // src/components/OrganizationList/index.js
 import * as React from 'react'
 import { map } from 'ramda'

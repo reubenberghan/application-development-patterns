@@ -5,7 +5,7 @@ Technologies, patterns, information flow and data management principles for buil
 ## Technologies
 - React
 - Redux
-- Epic Observable
+- Redux Observable
 - GraphQL
 - Styled Components
 - Ramda
